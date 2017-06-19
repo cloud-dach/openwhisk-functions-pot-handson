@@ -1,0 +1,1 @@
+return { message: 'Hello, '+ params.name + ' from ' + params.place + '. It is a great pleasure to have you here.'};
