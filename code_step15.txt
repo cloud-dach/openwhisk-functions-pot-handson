@@ -1,0 +1,1 @@
+return ({ "translateTo": "de", "payload" : "Hello this is the message"});
