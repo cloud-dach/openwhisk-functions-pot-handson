@@ -1,0 +1,1 @@
+return ({ "translateTo": "de", "payload" : params.english});
