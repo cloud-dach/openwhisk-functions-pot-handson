@@ -22,7 +22,7 @@ Das Sequence Diagram soll den Ablauf verdeutlichen, wie in OpenWhisk/Functions d
 ![OpenWhisk_02_Sequence](images/openwhisk_02_sequence.jpg)
 
 ---
-## Kurzanleitung
+## Kurzanleitung <a name="part0"></a>
 
 1. [Erstellen der Bluemix Services](#part1)
 2. [OpenWhisk/IBM Functions als Compute Modell](#part2)
@@ -34,6 +34,7 @@ Das Sequence Diagram soll den Ablauf verdeutlichen, wie in OpenWhisk/Functions d
 8. [Testing the OpenWhisk usage](#part8)
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 ### 1. **Erstellen der Bluemix Services** <a name="part1"></a>
 
 1. Im Browser die Bluemix Console in den USA öffnen https://console.ng.bluemix.net/ und mit den eigenen Zugangsdaten anmelden.
@@ -42,6 +43,7 @@ Das Sequence Diagram soll den Ablauf verdeutlichen, wie in OpenWhisk/Functions d
 schon einmal anlegen wollen. Dazu bitte den “Katalog” anwählen.
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 #### 1.1 **Cloudant Services**
 
  1. In der Suchzeile des Kataloges **Cloudant** eingeben, den Service auswählen
@@ -63,6 +65,7 @@ Wenn die Datenbank erfolgreich erstellt ist, wieder in den Bluemix-Browser-Tab u
 dem **Katalog** Link zurück zum Katalog wechseln.
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 #### 1.2 **Watson Language Translator Services**
 
 1. In der Katalog-Ansicht **Translator** in die Suchzeile eingeben, um den **Watson Language Translator** zu finden.
@@ -84,6 +87,7 @@ Das Ergebins im Dashboard.
 ![openwhisk_07_functions](images/openwhisk_07_functions_01.jpg)
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 ### 3. **OpenWhisk (IBM Functions) Working with Actions** <a name="part3"></a>
 
 1. Auf dem **Develop** Tab sieht man auf der linken Seite die Übersicht der **Actions**, die
@@ -142,6 +146,7 @@ Text ausgibt. In dem Konsolenlog sieht man auch, dass diese **Action** für ins
 **“Close”** unten rechts.
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 ### 4. **OpenWhisk (IBM Functions) Working with Sequences** <a name="part4"></a>
 
 Aktionen können verknüpft werden zu Ketten, sogenannten **“sequences”**. Dabei stehen die **JSON-Objekte** die eine Aktion zurückgibt, gleichzeitig als Input-Werte für die Folgeaktion zur Verfügung. Neben selbstgeschriebenen Funktionen stellt OpenWhisk auch eine Vielzahl von vorgefertigten **Actions** zur Verfügung, die direkt mit den **Bluemix Services** arbeiten. Ein Beispiel dafür ist der **Watson Language Service**, mit dem wir im folgenden einen kleinen Text übersetzen wollen.
@@ -185,6 +190,7 @@ erstellt haben sollte dieser Service Ihnen als Binding vorgeschlagen werden. Wä
 12. Auch wenn der Input-Editor ein **JSON Dokument** erwartet, so ist das für unseren erstenTest nicht entscheidend, da wir hier nur eine im Code fest geschriebene Nachrichtübersetzen. Deshalb direkt mit **“Invoke ...”** ausführen und Sie sollten die Übersetzung der Originalnachricht in der gewünschten Sprache sehen.
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 ### 5. **OpenWhisk (IBM Functions) Working with Rules** <a name="part5"></a>
 
 Die Idee hinter Serverless Programming ist, dass die **Actions** oder **Sequences** durch **Trigger** ausgelöst werden, dies kann, wie in unserem folgenden Beispiel, das Schreiben in eine Datenbank sein. Das heisst im Folgenden erstellen wir eine **Rule**: _Immer wenn_ **ein Document in einer Cloudant Datenbank erstellt oder verändert** _wird, startet die Regel die Action Sequence_, die folgende Schritte umfasst:
@@ -199,6 +205,8 @@ Schlüssel an den Watson Translator übergebne wird.
 
 ![OpenWhisk_02_Sequence](images/openwhisk_02_sequence.jpg)
 
+---
+[zurueck zur Kurzanleitung](#part0)
 ### 6. **OpenWhisk (IBM Functions) Working with extend Sequence** <a name="part6"></a>
 
 Der **Trigger** den wir später einführen liefert uns als Ergebnis die **docID** des veränderten Dokumentes in der **Cloudant-Datenbank**. Deshalb müssen wir erstellte Sequence nur noch mit der **Aktion** für das Lesen des Dokumentes _erweitern_. Dies geschieht mit einem **vorgefertigten Action aus dem Cloudant Package**.
@@ -250,6 +258,7 @@ Also insgesamt sollte dort stehen:
 Wenn Sie fertig sind mit dem editieren der Aktion, abspeichern mit **“Make it live”** nicht vergessen!
 
 ---
+[zurueck zur Kurzanleitung](#part0)
 ### 7. **OpenWhisk (IBM Functions) Working with Trigger and Rules** <a name="part7"></a>
 
 Jetzt wo die **"Sequence"** fertig ist fehlt nur noch der Auslöser, der **"Trigger"**.
@@ -271,6 +280,8 @@ Jetzt wo die **"Sequence"** fertig ist fehlt nur noch der Auslöser, der **"Trig
 5. Mit dem Abspeichern der Rule ist diese auch gleichzeitig scharf geschaltet worden! Von diesem Moment an führt jede Veränderung eines Dokumentes in der Datenbank zum Auslösen des Triggers und zum Ausführen der Sequence.
 ![openwhisk_09_functions_09](images/openwhisk_09_functions_09.jpg)
 
+---
+[zurueck zur Kurzanleitung](#part0)
 ### 8. **Testing the OpenWhisk (IBM Functions) usage** <a name="part8"></a>
 
 1. **Zum Testen** wechseln Sie bitte zuerst von **“Develop”** Ansicht im OpenWhisk Editor auf die
