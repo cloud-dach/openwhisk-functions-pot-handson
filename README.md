@@ -2,6 +2,8 @@
 
 **German version**
 
+_Hinweis:_ Da es viele Änderungen in der UI gab, ist dieser Workshop nicht mehr Aktuell und kann somit nicht verwendet werden. Im Moment ist kein Update geplant, da nun ein anderes Hands-On verwendet wird. ( https://github.com/cloud-dach/functions-serverless-web-app-HandsOn )
+
 Dies ist ein einfacher einstündiger Workshop für **OpenWhisk/Functions** auf Bluemix.
 
 [Apache OpenWhisk](https://openwhisk.incubator.apache.org/)
